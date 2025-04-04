@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hackathon 2025</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1em;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00d8ff;
+    }
+    .hero {
+      padding: 8em 2em;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .button {
+      margin-top: 1em;
+      padding: 0.7em 1.5em;
+      background-color: #00d8ff;
+      color: black;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    section {
+      padding: 4em 2em;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    footer {
+      padding: 2em;
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    input[type="text"], input[type="email"] {
+      padding: 0.5em;
+      margin: 0.5em 0;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#video">Promo</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero" id="home">
+    <h1>Welcome to Hackathon 2025</h1>
+    <p>Innovate. Build. Compete. Join the ultimate coding showdown!</p>
+    <button class="button" onclick="document.getElementById('register').scrollIntoView({ behavior: 'smooth' });">Register Now</button>
+  </div>
+
+  <section id="about">
+    <h2>About the Hackathon</h2>
+    <p>Hackathon 2025 is a 48-hour event where developers, designers, and entrepreneurs come together to build amazing projects. Learn, collaborate, and win exciting prizes!</p>
+  </section>
+
+  <section id="video">
+    <h2>Watch Our Promo</h2>
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </section>
+
+  <section id="register">
+    <h2>Register for the Hackathon</h2>
+    <form>
+      <label for="name">Full Name</label><br>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" required><br>
+
+      <button class="button" type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@hackathon2025.com</p>
+    <p>Phone: (123) 456-7890</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Hackathon. All rights reserved.
+  </footer>
+
+  <script>
+    // Example JS: Smooth scroll already added in button. You can expand functionality here.
+    console.log("Hackathon 2025 site loaded.");
+  </script>
+</body>
+</html>
