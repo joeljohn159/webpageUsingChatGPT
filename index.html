@@ -1,143 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hackathon 2025</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HackX - The Ultimate Hackathon</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+    * {
+      margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;
     }
-    header {
+    body {
+      background: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34') no-repeat center center/cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
       background-color: rgba(0, 0, 0, 0.7);
-      padding: 1em;
-      position: fixed;
-      width: 100%;
+      position: sticky;
       top: 0;
       z-index: 1000;
     }
-    nav ul {
-      list-style-type: none;
-      display: flex;
-      justify-content: space-around;
-      padding: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: white;
+    nav .logo {
+      font-size: 1.5rem;
       font-weight: bold;
+      color: #00e5ff;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
       transition: color 0.3s;
     }
-    nav a:hover {
-      color: #00d8ff;
+    nav ul li a:hover {
+      color: #00e5ff;
     }
-    .hero {
-      padding: 8em 2em;
+    header {
       text-align: center;
+      padding: 100px 20px;
       background-color: rgba(0, 0, 0, 0.6);
     }
-    .hero h1 {
+    header h1 {
       font-size: 3rem;
+      margin-bottom: 20px;
     }
-    .hero p {
-      font-size: 1.5rem;
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
-    .button {
-      margin-top: 1em;
-      padding: 0.7em 1.5em;
-      background-color: #00d8ff;
-      color: black;
-      border: none;
+    header button {
+      padding: 10px 20px;
       font-size: 1rem;
+      background-color: #00e5ff;
+      border: none;
       cursor: pointer;
+      color: black;
       border-radius: 5px;
     }
     section {
-      padding: 4em 2em;
+      padding: 60px 20px;
       background-color: rgba(0, 0, 0, 0.7);
     }
-    footer {
-      padding: 2em;
-      background-color: rgba(0, 0, 0, 0.8);
+    section h2 {
       text-align: center;
-      font-size: 0.9rem;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #00e5ff;
     }
-    input[type="text"], input[type="email"] {
-      padding: 0.5em;
-      margin: 0.5em 0;
+    .video-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .video-container video {
+      width: 80%;
+      border: 4px solid #00e5ff;
+      border-radius: 10px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+    .card {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #00e5ff;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #00e5ff;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    form input, form textarea, form button {
       width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
       border-radius: 5px;
       border: none;
     }
-    video {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 2em;
+    form input, form textarea {
+      background-color: #222;
+      color: white;
+    }
+    form button {
+      background-color: #00e5ff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <div class="logo">HackX</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#prizes">Prizes</a></li>
+      <li><a href="#register">Register</a></li>
+    </ul>
+  </nav>
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#video">Promo</a></li>
-        <li><a href="#register">Register</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Welcome to HackX 2025</h1>
+    <p>Join the most electrifying hackathon where innovators, coders, and creators come together to build the future!</p>
+    <button onclick="document.getElementById('register').scrollIntoView({behavior: 'smooth'})">Register Now</button>
   </header>
 
-  <div class="hero" id="home">
-    <h1>Welcome to Hackathon 2025</h1>
-    <p>Innovate. Build. Compete. Join the ultimate coding showdown!</p>
-    <button class="button" onclick="document.getElementById('register').scrollIntoView({ behavior: 'smooth' });">Register Now</button>
-  </div>
-
-  <section id="about">
-    <h2>About the Hackathon</h2>
-    <p>Hackathon 2025 is a 48-hour event where developers, designers, and entrepreneurs come together to build amazing projects. Learn, collaborate, and win exciting prizes!</p>
-  </section>
-
-  <section id="video">
-    <h2>Watch Our Promo</h2>
+  <section class="video-container">
+    <h2>Hackathon Promo</h2>
     <video controls>
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      Your browser does not support HTML video.
+      Your browser does not support the video tag.
     </video>
   </section>
 
+  <section id="about">
+    <h2>About HackX</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>What is HackX?</h3>
+        <p>A 48-hour coding marathon where developers from around the world compete to build cutting-edge software and hardware solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Who Can Join?</h3>
+        <p>Students, professionals, designers, and anyone with a passion for building technology — no matter your skill level!</p>
+      </div>
+      <div class="card">
+        <h3>Where is it?</h3>
+        <p>Hybrid format: Online and onsite at our tech campus in Austin, TX.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <h2>Event Schedule</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Day 1</h3>
+        <p>Opening Ceremony, Team Formation, Hacking Begins!</p>
+      </div>
+      <div class="card">
+        <h3>Day 2</h3>
+        <p>Workshops, Mentoring Sessions, Midnight Challenges.</p>
+      </div>
+      <div class="card">
+        <h3>Day 3</h3>
+        <p>Final Submissions, Demos, Closing Ceremony & Prizes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="prizes">
+    <h2>Prizes</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>1st Place</h3>
+        <p>$5,000 + Goodies + Internship Offers</p>
+      </div>
+      <div class="card">
+        <h3>2nd Place</h3>
+        <p>$2,500 + Swag Kits</p>
+      </div>
+      <div class="card">
+        <h3>3rd Place</h3>
+        <p>$1,000 + Sponsor Goodies</p>
+      </div>
+    </div>
+  </section>
+
   <section id="register">
-    <h2>Register for the Hackathon</h2>
-    <form>
-      <label for="name">Full Name</label><br>
-      <input type="text" id="name" name="name" required><br>
-
-      <label for="email">Email</label><br>
-      <input type="email" id="email" name="email" required><br>
-
-      <button class="button" type="submit">Submit</button>
+    <h2>Register Now</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="text" placeholder="University/Company" required />
+      <textarea rows="4" placeholder="Why do you want to join?" required></textarea>
+      <button type="submit">Submit</button>
     </form>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: support@hackathon2025.com</p>
-    <p>Phone: (123) 456-7890</p>
-  </section>
-
   <footer>
-    &copy; 2025 Hackathon. All rights reserved.
+    &copy; 2025 HackX. All rights reserved. | Contact: hackx@eventmail.com
   </footer>
 
   <script>
-    // Example JS: Smooth scroll already added in button. You can expand functionality here.
-    console.log("Hackathon 2025 site loaded.");
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Thank you for registering! We'll reach out to you soon.");
+      event.target.reset();
+    }
   </script>
 </body>
 </html>
